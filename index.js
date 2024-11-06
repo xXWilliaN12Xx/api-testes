@@ -4,6 +4,10 @@ const PORT = 3000;
 
 app.use(express.json());
 
+const itemRoutes = require('./routes/items');
+
+app.use('/items', itemRoutes);
+
 app.get('/', (req, res) => {
     res.send('Bem-vindo à API!');
 });
